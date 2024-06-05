@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate 360</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" type="image/png" href="/static/msg1077964079-244131.000049.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="untitled-page untitled-page__realEstateSection">
+    <div class="untitled-page__group">
+
+    </div>
+    <div class="untitled-page__flexCol">
+      <div class="untitled-page__flexRow">
+        <div class="untitled-page__contentBox">
+          <div class="untitled-page__flexCol1">
+            <img src="/static/msg1077964079-244131.000049.jpg">
+          </div>
+        </div>
+        <h1 class="untitled-page__mainTitle ">Real<br />Estate 360</h1>
+        <a  href="{{ url_for('predict') }}" class="untitled-page__priceCalculatorBtn" >Price calculator</a><button
+          class="untitled-page__aboutUsBtn">About us</button><button class="untitled-page__helpBtn">Help</button>
+
+      </div>
+      <div class="untitled-page__flexCol2">
+        <h2 class="untitled-page__welcomeTitle">Welcome to Real Estate 360</h2>
+        <h1 class="untitled-page__heroTitle1">Do you want to know<br />the real property value?</h1>
+        <h1 class="untitled-page__descriptionTitle">
+          Our main goal is to make the Kazakhstan market more transparent.<br />Calculate the cost of the apartment that
+          want to buy or sell through our calculator.
+        </h1>
+        <a href="{{ url_for('predict') }}" class="untitled-page__estimateCostBtn">Calculate the cost</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

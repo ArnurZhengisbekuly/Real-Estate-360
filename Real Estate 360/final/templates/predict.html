@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/png" href="/static/msg1077964079-244131.000049.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="untitled-page untitled-page__realEstateSection">
+        <div class="untitled-page__group">
+
+        </div>
+        <div class="untitled-page__flexCol">
+            <div class="untitled-page__flexRow">
+                <div class="untitled-page__contentBox">
+                    <div class="untitled-page__flexCol1">
+                        <img src="/static/msg1077964079-244131.000049.jpg">
+                    </div>
+                </div>
+                <a href="{{ url_for('home') }}" class="untitled-page__mainTitle">Real<br />Estate 360</a>                
+                <button class="untitled-page__priceCalculatorBtn">Price calculator</button><button
+                    class="untitled-page__aboutUsBtn">About us</button><button
+                    class="untitled-page__helpBtn">Help</button>
+
+            </div>
+            <div class="formSection">
+                <div class="formGroup">
+                   
+                    <div class="container mt-5">
+                        <form action="/predict" method="post">
+                            <div class="form-group">
+                                <label for="Rooms" class="custom-label">Number of Rooms:</label>
+                                <input type="number" class="form-control" id="Rooms" name="Property Type" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Area" class="custom-label">Area (m²):</label>
+                                <input type="number" step="0.01" class="form-control" id="Area" name="Area" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="custom-label">Region:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="region1" name="Region" value="Астана, Есильский р-н" required>
+                                    <label class="custom-control-label" for="region1">Esil region</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="region2" name="Region" value="Астана, Нура р-н" required>
+                                    <label class="custom-control-label" for="region2">Nura region</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="region3" name="Region" value="Астана, Сарыарка р-н" required>
+                                    <label class="custom-control-label" for="region3">Saryarka region</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="region4" name="Region" value="Астана, р-н Байконур" required>
+                                    <label class="custom-control-label" for="region4">Baikonur region</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="region5" name="Region" value="Астана, Алматы р-н" required>
+                                    <label class="custom-control-label" for="region5">Almaty region</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="custom-label">Home Type:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="home1" name="Home Type" value="монолитный" required>
+                                    <label class="custom-control-label" for="home1">monolithic</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="home2" name="Home Type" value="кирпичный" required>
+                                    <label class="custom-control-label" for="home2">brick</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="home3" name="Home Type" value="панельный" required>
+                                    <label class="custom-control-label" for="home3">panel</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="home4" name="Home Type" value="иное" required>
+                                    <label class="custom-control-label" for="home4">other</label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="custom-label">Housing Class:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="e" name="ф" value="e" required>
+                                    <label class="custom-control-label" for="e">IV (Economy)</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="c" name="ф" value="c" required>
+                                    <label class="custom-control-label" for="c">III (Comfort)</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="b" name="ф" value="b" required>
+                                    <label class="custom-control-label" for="b">II (Business)</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="el" name="ф" value="el" required>
+                                    <label class="custom-control-label" for="el">I (Elite)</label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="Year" class="custom-label">Year:</label>
+                                <input type="number" class="form-control" id="Year" name="Year" required>
+                            </div>
+                            <div>
+                                <button type="submit" class=" mt-3 mb-3 btn btn-warning">Predict</button>
+                            </div>
+                        </form>
+                    </div>
+                    {% if prediction_text %}
+                    <h2>{{ prediction_text }}</h2>
+                    {% endif %}
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
