@@ -1,0 +1,1 @@
+I propose to develop an automated model to assess real estate value by analyzing large datasets. The model will use sales data, property characteristics, and market trends to predict property prices with machine learning algorithms. I'll leverage data from the krisha.kz app, which offers extensive real estate information for Astana.
